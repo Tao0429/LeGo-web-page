@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style type="text/css">
+        {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* 绝对定位 相对于浏览器的四个角定位 必须是父容器没有定位属性的情况*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 固定定位 */
+            /* position: fixed; */
+        }
+        /* 有定位属性就相当于父元素---//--- 没有定位属性就相当于浏览器的四个角 */
+        
+        .out-box {
+            width: 400px;
+            height: 100px;
+            background-color: red;
+            margin: 100px auto;
+            /* 相对定位 */
+            position: relative;
+        }
+        
+        .in-box {
+            width: 100px;
+            height: 200px;
+            background-color: green;
+            /* 绝对定位 */
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 10px;
+        }
+        
+        .inner-box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box1"></div> -->
+    <div class="out-box">
+        <div class="in-box"></div>
+        <div class="inner-box"></div>
+    </div>
+</body>
+
+</html>
