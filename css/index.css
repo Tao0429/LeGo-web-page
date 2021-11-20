@@ -279,8 +279,9 @@
     /* border-top: 1px solid #ff6700; */
 }
 
-.menu .sideMenu ul li:hover .sideMenu {
+.menu .sideMenu ul li:hover .subMenu {
     display: block;
+    background-color: #ffffff;
 }
 
 .menu .sideMenu ul li .subMenu {
@@ -289,8 +290,9 @@
     left: 198px;
     border: 2px solid #ff6700;
     width: 500px;
-    height: 426px;
+    height: 428px;
     display: none;
+    z-index: 80;
 }
 
 
@@ -1199,7 +1201,7 @@
 /* 10.==================推广商品================== */
 
 .promotion {
-    height: 554px;
+    height: 650px;
     background-color: #fff;
     margin-top: 30px;
 }
@@ -1210,66 +1212,94 @@
     line-height: 40px;
     margin-top: 10px;
     text-indent: 24px;
-    float: left;
+    /* float: left; */
     font-weight: 300px;
     border-bottom: 6px solid #ff6700;
     font-size: 24px;
     color: #ff6700;
 }
 
+.promotion .top-promotion ul li {
+    width: 15px;
+    float: right;
+    height: 15px;
+    border-radius: 50%;
+    /* background: #ccc; */
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #ccc;
+}
 
-/* .promotion .bottom-promotion {
-    float: left;
-    width: 1200px;
-    height: 562px;
-    background-color: red;
-} */
+.promotion .top-promotion ul li.active {
+    background-color: #ff6700;
+}
 
 .promotion .bottom-promotion {
-    width: 1190px;
-    height: 498px;
-    margin: 0 auto;
+    width: 1200px;
+    height: 600px;
+    background-color: #fff;
+}
+
+
+/* 外部盒子 */
+
+.promotion .bottom-promotion .out-box {
+    width: 1170px;
+    height: 600px;
+    margin: 20px auto;
+    /* 超出隐藏 */
+    overflow: hidden;
+}
+
+
+/*内部盒子 */
+
+.promotion .bottom-promotion .out-box .inner-box {
+    width: 2340px;
+    height: 600px;
+    position: relative;
+    left: 0;
 }
 
 
 /* 列表容器 */
 
-.promotion .bottom-promotion ul {
-    width: 1190px;
-    height: 498px;
-    margin: 0 auto;
+.promotion .bottom-promotion .promotion-list {
+    width: 1170px;
+    height: 600px;
     /* background-color: #ff6700; */
 }
 
 
 /* 推荐列表li */
 
-.promotion .bottom-promotion ul li {
-    width: 196px;
-    height: 247px;
+.promotion .bottom-promotion .promotion-list li {
+    width: 214px;
+    height: 300px;
     background-color: #ffffff;
     float: left;
-    margin-left: 2px;
+    margin-left: 20px;
+    /* border-radius: 20px; */
     margin-bottom: 2px;
 }
 
 
 /* 整体居中 */
 
-.promotion .bottom-promotion ul li {
+.promotion .bottom-promotion .promotion-list li {
     text-align: center;
 }
 
 
 /* p标签样式 */
 
-.promotion .bottom-promotion ul li p {
+.promotion .bottom-promotion .promotion-list li p {
     text-indent: 10px;
     text-align: left;
     font-size: 14px;
 }
 
-.promotion .bottom-promotion ul li p desc {
+.promotion .bottom-promotion .promotion-list li p desc {
     text-align: left;
     font-size: 14px;
 }
@@ -1277,26 +1307,26 @@
 
 /* 限时 */
 
-.promotion .bottom-promotion ul li p.limit-time {
+.promotion .bottom-promotion .promotion-list li p.limit-time {
     text-align: left;
     text-indent: 0;
 }
 
-.promotion .bottom-promotion ul li p.limit-time .zi {
+.promotion .bottom-promotion .promotion-list li p.limit-time .zi {
     color: #ff6700;
 }
 
 
 /* 全国联保 */
 
-.promotion .bottom-promotion ul li p.text {
+.promotion .bottom-promotion .promotion-list li p.text {
     color: red;
 }
 
 
 /* 价格 */
 
-.promotion .bottom-promotion ul li p.price {
+.promotion .bottom-promotion .promotion-list li p.price {
     color: red;
     font-size: 20px;
     font-weight: 100;
@@ -1314,6 +1344,13 @@ img {
     height: 130px;
     width: 100%;
     background-color: rgba(204, 204, 204, 0.753);
+}
+
+.footer .gototop {
+    position: absolute;
+    margin-bottom: 20px;
+    right: 100px;
+    height: 41px;
 }
 
 
@@ -1362,7 +1399,7 @@ img {
 }
 
 
-/* 底部盒子的中间盒子样式 */
+/********** 底部盒子的中间盒子样式 **********/
 
 .bottom-footer .center-footer {
     margin: auto;
@@ -1424,7 +1461,7 @@ img {
     width: 800px;
     height: 30px;
     font-size: 10px;
-    font-family: SimHei;
+    /* font-family: SimHei; */
 }
 
 .bottom-footer .smalltiao ul li {
@@ -1447,5 +1484,24 @@ img {
 
 .bottom-footer .zhushi ul li {
     font-size: 10px;
-    font-family: SimHei;
+}
+
+
+/* ===============  返回顶部 ================= */
+
+.backToTop {
+    height: 50px;
+    width: 30px;
+    /* 定位 */
+    position: fixed;
+    bottom: 100px;
+    left: 610px;
+    margin-left: 50%;
+    /* 默认隐藏 */
+    display: none;
+}
+
+.backToTop img {
+    width: 30px;
+    height: 50px;
 }

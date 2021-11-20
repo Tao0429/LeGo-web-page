@@ -93,4 +93,98 @@ $(function() {
         controlsCurrentColor: "#ff6600", //当前控制按钮的颜色
     });
 
+    // 电子书table切换
+    var $lis = $('.ebooks .ebooks-nav > li');
+    $lis.mouseenter(function() {
+        //给自己添加激活类active 把兄弟都干掉
+        $(this).addClass('active').siblings().removeClass('active');
+        //获取index
+        var index = $(this).index;
+        //选中内容
+        var $ebookslist = $('ebooks-list');
+        //显示索引等于当前index
+        $ebookslist.eq(index).show().siblings('.ebooks-list').hide();
+    })
+
+    //服装table切换
+    var $lis = $('.clothes .top-box ul li');
+    $lis.mouseenter(function() {
+        //给自己添加激活类active 把兄弟都干掉
+        $(this).addClass('active').siblings().removeClass('active');
+        //获取index
+        var index = $(this).index;
+        //选中内容
+        var $ebookslist = $('content');
+        //显示索引等于当前index
+        $ebookslist.eq(index).show().siblings('.content').hide();
+    })
+
+
+    // 户外运动table切换
+    var $lis = $('.sport .top-box ul li');
+    $lis.mouseenter(function() {
+        //给自己添加激活类active 把兄弟都干掉
+        $(this).addClass('active').siblings().removeClass('active');
+        //获取index
+        var index = $(this).index;
+        //选中内容
+        var $ebookslist = $('content');
+        //显示索引等于当前index
+        $ebookslist.eq(index).show().siblings('.content').hide();
+    })
+
+
+    // 童装table切换
+    var $lis = $('.children-clothes .top-box ul li');
+    $lis.mouseenter(function() {
+        //给自己添加激活类active 把兄弟都干掉
+        $(this).addClass('active').siblings().removeClass('active');
+        //获取index
+        var index = $(this).index;
+        //选中内容
+        var $ebookslist = $('content');
+        //显示索引等于当前index
+        $ebookslist.eq(index).show().siblings('.content').hide();
+    })
+
+    /*推广商品切换 */
+    $('.promotion .top-promotion ul li').mouseenter(function() {
+        //导航激活类的切换
+        $(this).addClass('active').siblings().removeClass('active')
+
+        //内容切换
+        //获取对应的索引
+        var index = $(this).index(); // 0 => left:0 *1170 ,   1 => left:-1 *-1170, 3 => left:-2 *-2340
+        console.log(index)
+        console.log($('.promotion .bottom-promotion .inner-box'))
+            //左右移动
+        $('.promotion .bottom-promotion .inner-box').animate({
+            'left': -index * 1170
+        }, 300)
+    });
+
+
+
+    /*返回顶部 */
+    //绑定滚动事件
+    $(document).scroll(function() {
+        //获取距离顶部的位置
+        var topDistance = $('html,body').scrollTop();
+        //判断
+        if (topDistance > 500) {
+            $('.backToTop').fadeIn();
+        } else {
+            $('.backToTop').fadeOut();
+        }
+    });
+    //返回顶部功能
+    $('.backToTop').click(function() {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 300)
+    })
+
+
+
+
 })
