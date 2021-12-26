@@ -63,7 +63,6 @@
 .guess-you-like {
     width: 1200px;
     height: 456px;
-    background-color: aqua;
 }
 
 .guess-you-like-title {
@@ -91,13 +90,13 @@
 .guess-you-like-content {
     height: 500px;
     width: 1200px;
-    background-color: gray;
 }
 
 
 /*上下滑动*/
 
-.out-box {
+
+/* .out-box {
     overflow: hidden;
 }
 
@@ -105,13 +104,11 @@
     height: 1500px;
     position: relative;
     top: 0;
-}
+} */
 
 
 /*左右滑动*/
 
-
-/* 
 .out-box {
     overflow: hidden;
 }
@@ -120,7 +117,7 @@
     width: 4800px;
     position: relative;
     left: 0;
-} */
+}
 
 .guess-you-like-content li {
     width: 1200px;
