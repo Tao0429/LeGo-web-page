@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- iconfont.css -->
+    <link rel="stylesheet" href="/Term2-project/trunk/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/Term2-project/trunk/css/starRate.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <!-- jquery.min.js -->
+    <script src="/Term2-project/trunk/js/jquery.min.js"></script>
+    <script src="/Term2-project/trunk/js/starRate.js"></script>
+    <script>
+        $(function() {
+            var star1 = createStarRate(3.6);
+            $('.box1').html(star1);
+
+
+            // //扩展
+            // $('.box1').createStarRate(2.5);
+
+            var star2 = createStarRate(4.5);
+            $('.box2').html(star2);
+
+            var star3 = createStarRate(2.5);
+            $('.box3').html(star3);
+        })
+    </script>
+</body>
+
+
+</html>
